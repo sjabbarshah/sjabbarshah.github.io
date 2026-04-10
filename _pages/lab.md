@@ -114,6 +114,8 @@ author_profile: true
   margin-top: auto;
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .lab-btn {
@@ -160,6 +162,8 @@ author_profile: true
       <p class="lab-card__name"><a href="https://www.uml.edu/engineering/mechanical-industrial/faculty/sabato-alessandro.aspx" target="_blank">Prof. Alessandro Sabato</a></p>
       <p class="lab-card__comment"><strong>Advisor</strong>  &mdash; A great advisor who helps you grow both professionally and personally. A wonderful mentor with intellect, wit, and exceptional Italian cooking taste. 🇮🇹</p>
       <div class="lab-card__action">
+        <a href="https://scholar.google.com/citations?user=4ygwtrUAAAAJ&hl=it" class="lab-btn" target="_blank">Scholar <i class="fas fa-graduation-cap"></i></a>
+        <a href="https://www.linkedin.com/in/alessandro-sabato-251b6a64/?locale=en" class="lab-btn" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a>
         <a href="https://www.uml.edu/engineering/mechanical-industrial/faculty/sabato-alessandro.aspx" class="lab-btn" target="_blank">Profile <i class="fas fa-external-link-alt"></i></a>
       </div>
     </div>
