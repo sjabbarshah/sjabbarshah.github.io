@@ -90,16 +90,16 @@ author_profile: true
   </div>
 </div>
 
-<h2 class="lab-section-title">Postdoctoral Mentor/Friend</h2>
+<h2 class="lab-section-title">Postdoctoral Mentor</h2>
 <div class="lab-grid">
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/fabio.jpeg" alt="Fabio Bottalico, Ph.D."></div>
     <p class="lab-card__name"><a href="https://www.linkedin.com/in/fabio-bottalico/" target="_blank">Fabio Bottalico, Ph.D.</a></p>
-    <p class="lab-card__role">Postdoctoral Mentor/Friend</p>
+    <p class="lab-card__role">Postdoctoral Mentor</p>
   </div>
 </div>
 
-<h2 class="lab-section-title">Labmates and Friends</h2>
+<h2 class="lab-section-title">Labmates</h2>
 <div class="lab-grid">
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/profile.png" alt="Jabbar Shah"></div>
@@ -119,6 +119,11 @@ author_profile: true
   <div class="lab-card">
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
     <p class="lab-card__name">Francisco</p>
+    <p class="lab-card__role">Graduate Student</p>
+  </div>
+  <div class="lab-card">
+    <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
+    <p class="lab-card__name">Joao Oliveira</p>
     <p class="lab-card__role">Graduate Student</p>
   </div>
 </div>
