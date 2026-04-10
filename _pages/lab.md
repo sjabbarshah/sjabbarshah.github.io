@@ -81,25 +81,25 @@ author_profile: true
 }
 </style>
 
-<h2 class="lab-section-title">Principal Investigator</h2>
+<h2 class="lab-section-title">Advisor</h2>
 <div class="lab-grid">
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/professor.png" alt="Prof. Alessandro Sabato"></div>
     <p class="lab-card__name"><a href="https://www.uml.edu/engineering/mechanical-industrial/faculty/sabato-alessandro.aspx" target="_blank">Prof. Alessandro Sabato</a></p>
-    <p class="lab-card__role">Principal Investigator</p>
+    <p class="lab-card__role">Advisor</p>
   </div>
 </div>
 
-<h2 class="lab-section-title">Postdoctoral Researcher</h2>
+<h2 class="lab-section-title">Postdoctoral Mentor/Friend</h2>
 <div class="lab-grid">
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/fabio.jpeg" alt="Fabio Bottalico, Ph.D."></div>
     <p class="lab-card__name"><a href="https://www.linkedin.com/in/fabio-bottalico/" target="_blank">Fabio Bottalico, Ph.D.</a></p>
-    <p class="lab-card__role">Postdoctoral Researcher</p>
+    <p class="lab-card__role">Postdoctoral Mentor/Friend</p>
   </div>
 </div>
 
-<h2 class="lab-section-title">Graduate Students</h2>
+<h2 class="lab-section-title">Labmates and Friends</h2>
 <div class="lab-grid">
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/profile.png" alt="Jabbar Shah"></div>
