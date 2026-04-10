@@ -68,7 +68,17 @@ author_profile: true
 .lab-card__role {
   font-size: 0.85em;
   color: var(--masthead-link-color, #6c757d);
+  margin: 0 0 0.6em;
+}
+
+.lab-card__comment {
+  font-size: 0.82em;
+  color: var(--masthead-link-color, #6c757d);
+  font-style: italic;
   margin: 0;
+  line-height: 1.5;
+  border-top: 1px solid var(--border-color, #e1e4e8);
+  padding-top: 0.6em;
 }
 
 .lab-section-title {
@@ -87,6 +97,7 @@ author_profile: true
     <div class="lab-card__avatar"><img src="/images/professor.png" alt="Prof. Alessandro Sabato"></div>
     <p class="lab-card__name"><a href="https://www.uml.edu/engineering/mechanical-industrial/faculty/sabato-alessandro.aspx" target="_blank">Prof. Alessandro Sabato</a></p>
     <p class="lab-card__role">Advisor</p>
+    <p class="lab-card__comment">Intellectual and witty advisor with great Italian cooking skills. 🇮🇹</p>
   </div>
 </div>
 
@@ -96,6 +107,7 @@ author_profile: true
     <div class="lab-card__avatar"><img src="/images/fabio.jpeg" alt="Fabio Bottalico, Ph.D."></div>
     <p class="lab-card__name"><a href="https://www.linkedin.com/in/fabio-bottalico/" target="_blank">Fabio Bottalico, Ph.D.</a></p>
     <p class="lab-card__role">Postdoctoral Mentor</p>
+    <p class="lab-card__comment">&nbsp;</p>
   </div>
 </div>
 
@@ -105,25 +117,31 @@ author_profile: true
     <div class="lab-card__avatar"><img src="/images/profile.png" alt="Jabbar Shah"></div>
     <p class="lab-card__name">Jabbar Shah</p>
     <p class="lab-card__role">Graduate Student</p>
+    <p class="lab-card__comment">&nbsp;</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/gaurav.jpeg" alt="Gaurav Modak"></div>
     <p class="lab-card__name"><a href="https://www.linkedin.com/in/gaurav0123/" target="_blank">Gaurav Modak</a></p>
     <p class="lab-card__role">Graduate Student</p>
+    <p class="lab-card__comment">&nbsp;</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/mo.jpg" alt="Mo"></div>
     <p class="lab-card__name">Mo</p>
     <p class="lab-card__role">Graduate Student</p>
+    <p class="lab-card__comment">&nbsp;</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
     <p class="lab-card__name">Francisco</p>
     <p class="lab-card__role">Graduate Student</p>
+    <p class="lab-card__comment">&nbsp;</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
     <p class="lab-card__name">Joao Oliveira</p>
     <p class="lab-card__role">Graduate Student</p>
+    <p class="lab-card__comment">&nbsp;</p>
   </div>
 </div>
+
