@@ -63,7 +63,7 @@ author_profile: true
   left: 0;
   width: 100%;
   z-index: 2;
-  padding: 80px 1.5em 1em;
+  padding: 100px 1.25em 1.25em;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -74,7 +74,7 @@ author_profile: true
 .lab-card__name {
   font-size: 1.25em;
   font-weight: 700;
-  margin: 0 0 0.1em;
+  margin: 0 0 0.2em;
   color: #1a1a1a;
 }
 
@@ -106,7 +106,7 @@ author_profile: true
 .lab-card__comment {
   font-size: 0.85em;
   color: #4a4a4a;
-  margin: 0 0 1.5em;
+  margin: 0 0 0.8em;
   line-height: 1.3;
 }
 
