@@ -30,9 +30,9 @@ author_profile: true
 }
 
 .lab-card__avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
   background: var(--border-color, #e1e4e8);
   margin: 0 auto 1em;
   display: flex;
