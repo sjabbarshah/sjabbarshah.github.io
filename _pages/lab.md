@@ -97,7 +97,7 @@ author_profile: true
     <div class="lab-card__avatar"><img src="/images/professor.png" alt="Prof. Alessandro Sabato"></div>
     <p class="lab-card__name"><a href="https://www.uml.edu/engineering/mechanical-industrial/faculty/sabato-alessandro.aspx" target="_blank">Prof. Alessandro Sabato</a></p>
     <p class="lab-card__role">Advisor</p>
-    <p class="lab-card__comment">A brilliant and inspiring mentor — sharp intellect, great wit, and legendary Italian cooking skills. 🇮🇹</p>
+    <p class="lab-card__comment">A brilliant and inspiring mentor with sharp intellect, great wit, and legendary Italian cooking skills. 🇮🇹</p>
   </div>
 </div>
 
@@ -123,7 +123,7 @@ author_profile: true
     <div class="lab-card__avatar"><img src="/images/gaurav.jpeg" alt="Gaurav Modak"></div>
     <p class="lab-card__name"><a href="https://www.linkedin.com/in/gaurav0123/" target="_blank">Gaurav Modak</a></p>
     <p class="lab-card__role">Graduate Student</p>
-    <p class="lab-card__comment">A genuinely talented and warm individual — wonderful friend and an outstanding cook.</p>
+    <p class="lab-card__comment">A genuinely talented and warm individual who is both a wonderful friend and an outstanding cook.</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/mo.jpg" alt="Mo"></div>
@@ -135,13 +135,13 @@ author_profile: true
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
     <p class="lab-card__name">Francisco</p>
     <p class="lab-card__role">Graduate Student</p>
-    <p class="lab-card__comment">A powerhouse of energy and skill — always proactive and a true pleasure to work with.</p>
+    <p class="lab-card__comment">A powerhouse of energy and skill, always proactive and a true pleasure to work with.</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
     <p class="lab-card__name">Joao Oliveira</p>
     <p class="lab-card__role">Graduate Student</p>
-    <p class="lab-card__comment">Calm, highly capable, and always dependable — handles every challenge with composure.</p>
+    <p class="lab-card__comment">Calm, highly capable, and always dependable. Handles every challenge with composure and grace.</p>
   </div>
 </div>
 
