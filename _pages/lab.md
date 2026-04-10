@@ -107,7 +107,7 @@ author_profile: true
     <div class="lab-card__avatar"><img src="/images/fabio.jpeg" alt="Fabio Bottalico, Ph.D."></div>
     <p class="lab-card__name"><a href="https://www.linkedin.com/in/fabio-bottalico/" target="_blank">Fabio Bottalico, Ph.D.</a></p>
     <p class="lab-card__role">Postdoctoral Mentor</p>
-    <p class="lab-card__comment">Skillful, with great coordination.</p>
+    <p class="lab-card__comment">An exceptionally skillful researcher with remarkable coordination and a keen eye for detail.</p>
   </div>
 </div>
 
@@ -123,25 +123,25 @@ author_profile: true
     <div class="lab-card__avatar"><img src="/images/gaurav.jpeg" alt="Gaurav Modak"></div>
     <p class="lab-card__name"><a href="https://www.linkedin.com/in/gaurav0123/" target="_blank">Gaurav Modak</a></p>
     <p class="lab-card__role">Graduate Student</p>
-    <p class="lab-card__comment">Talented and a great cook. Friendly.</p>
+    <p class="lab-card__comment">A genuinely talented and warm individual — wonderful friend and an outstanding cook.</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/mo.jpg" alt="Mo"></div>
     <p class="lab-card__name">Mo</p>
     <p class="lab-card__role">Graduate Student</p>
-    <p class="lab-card__comment">Simple, talented, and entertaining.</p>
+    <p class="lab-card__comment">A humble and gifted mind with a wonderful ability to light up the room.</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
     <p class="lab-card__name">Francisco</p>
     <p class="lab-card__role">Graduate Student</p>
-    <p class="lab-card__comment">Highly active, skillful, and full of great energy.</p>
+    <p class="lab-card__comment">A powerhouse of energy and skill — always proactive and a true pleasure to work with.</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
     <p class="lab-card__name">Joao Oliveira</p>
     <p class="lab-card__role">Graduate Student</p>
-    <p class="lab-card__comment">Cool, capable, and great with handling things.</p>
+    <p class="lab-card__comment">Calm, highly capable, and always dependable — handles every challenge with composure.</p>
   </div>
 </div>
 
