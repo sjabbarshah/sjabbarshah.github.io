@@ -30,8 +30,8 @@ author_profile: true
 }
 
 .lab-card__avatar {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: var(--border-color, #e1e4e8);
   margin: 0 auto 1em;
@@ -40,6 +40,13 @@ author_profile: true
   justify-content: center;
   font-size: 2em;
   color: var(--masthead-link-color, #6c757d);
+  overflow: hidden;
+}
+
+.lab-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .lab-card__name {
@@ -47,6 +54,15 @@ author_profile: true
   font-weight: 600;
   margin: 0 0 0.3em;
   color: var(--text-color, #24292e);
+}
+
+.lab-card__name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lab-card__name a:hover {
+  color: var(--link-color, #494e52);
 }
 
 .lab-card__role {
@@ -65,32 +81,44 @@ author_profile: true
 }
 </style>
 
-<!-- TODO: Replace the placeholder names below with your actual lab members -->
-
 <h2 class="lab-section-title">Principal Investigator</h2>
 <div class="lab-grid">
   <div class="lab-card">
-    <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
-    <p class="lab-card__name">Dr. [Advisor Name]</p>
+    <div class="lab-card__avatar"><img src="/images/professor.png" alt="Prof. Alessandro Sabato"></div>
+    <p class="lab-card__name"><a href="https://www.uml.edu/engineering/mechanical-industrial/faculty/sabato-alessandro.aspx" target="_blank">Prof. Alessandro Sabato</a></p>
     <p class="lab-card__role">Principal Investigator</p>
+  </div>
+</div>
+
+<h2 class="lab-section-title">Postdoctoral Researcher</h2>
+<div class="lab-grid">
+  <div class="lab-card">
+    <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
+    <p class="lab-card__name">Fabio Bottalico</p>
+    <p class="lab-card__role">Postdoctoral Researcher</p>
   </div>
 </div>
 
 <h2 class="lab-section-title">Graduate Students</h2>
 <div class="lab-grid">
   <div class="lab-card">
-    <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
+    <div class="lab-card__avatar"><img src="/images/profile.png" alt="Jabbar Shah"></div>
     <p class="lab-card__name">Jabbar Shah</p>
-    <p class="lab-card__role">Graduate Research Assistant</p>
-  </div>
-  <div class="lab-card">
-    <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
-    <p class="lab-card__name">[Lab Member 2]</p>
     <p class="lab-card__role">Graduate Student</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
-    <p class="lab-card__name">[Lab Member 3]</p>
+    <p class="lab-card__name">Gaurav Modak</p>
+    <p class="lab-card__role">Graduate Student</p>
+  </div>
+  <div class="lab-card">
+    <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
+    <p class="lab-card__name">Mo</p>
+    <p class="lab-card__role">Graduate Student</p>
+  </div>
+  <div class="lab-card">
+    <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
+    <p class="lab-card__name">Francisco</p>
     <p class="lab-card__role">Graduate Student</p>
   </div>
 </div>
