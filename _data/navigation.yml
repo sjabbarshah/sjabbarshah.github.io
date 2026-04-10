@@ -1,5 +1,4 @@
 # Main navigation links shown in the site header.
-# Reordered for a personal portfolio with timeline landing page.
 
 main:
   - title: "About"
@@ -8,11 +7,5 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Publications"
-    url: /publications/
-
-  - title: "Portfolio"
-    url: /portfolio/
-
-  - title: "Blog"
+  - title: "Activities"
     url: /year-archive/
