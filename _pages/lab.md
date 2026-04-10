@@ -93,8 +93,8 @@ author_profile: true
 <h2 class="lab-section-title">Postdoctoral Researcher</h2>
 <div class="lab-grid">
   <div class="lab-card">
-    <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
-    <p class="lab-card__name">Fabio Bottalico</p>
+    <div class="lab-card__avatar"><img src="/images/fabio.jpeg" alt="Fabio Bottalico, Ph.D."></div>
+    <p class="lab-card__name"><a href="https://www.linkedin.com/in/fabio-bottalico/" target="_blank">Fabio Bottalico, Ph.D.</a></p>
     <p class="lab-card__role">Postdoctoral Researcher</p>
   </div>
 </div>
@@ -107,12 +107,12 @@ author_profile: true
     <p class="lab-card__role">Graduate Student</p>
   </div>
   <div class="lab-card">
-    <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
-    <p class="lab-card__name">Gaurav Modak</p>
+    <div class="lab-card__avatar"><img src="/images/gaurav.jpeg" alt="Gaurav Modak"></div>
+    <p class="lab-card__name"><a href="https://www.linkedin.com/in/gaurav0123/" target="_blank">Gaurav Modak</a></p>
     <p class="lab-card__role">Graduate Student</p>
   </div>
   <div class="lab-card">
-    <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
+    <div class="lab-card__avatar"><img src="/images/mo.jpg" alt="Mo"></div>
     <p class="lab-card__name">Mo</p>
     <p class="lab-card__role">Graduate Student</p>
   </div>
