@@ -63,7 +63,7 @@ author_profile: true
   left: 0;
   width: 100%;
   z-index: 2;
-  padding: 60px 1.5em 1.5em;
+  padding: 80px 1.5em 1em;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -74,7 +74,7 @@ author_profile: true
 .lab-card__name {
   font-size: 1.25em;
   font-weight: 700;
-  margin: 0 0 0.3em;
+  margin: 0 0 0.1em;
   color: #1a1a1a;
 }
 
@@ -91,7 +91,7 @@ author_profile: true
   font-size: 0.9em;
   font-weight: 600;
   color: #4a4a4a;
-  margin: 0 0 0.5em;
+  margin: 0 0 0.2em;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -107,7 +107,7 @@ author_profile: true
   font-size: 0.85em;
   color: #4a4a4a;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .lab-section-title {
