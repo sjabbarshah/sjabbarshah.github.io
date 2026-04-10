@@ -15,16 +15,6 @@ Education
 * **Master's Degree**, Hanyang University, South Korea
 * **Bachelor's Degree**, UET Khuzdar
 
-Skills
-======
-* **Programming Languages**: Python, Java, JavaScript, C/C++
-  <!-- TODO: Update with your actual skills -->
-* **Frameworks & Tools**: TensorFlow, PyTorch, Git, Docker
-* **Web Technologies**: HTML, CSS, React, Node.js
-* **Databases**: MySQL, PostgreSQL, MongoDB
-
-<!-- TODO: Add your work experience, publications, projects, etc. as you build your portfolio -->
-
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
