@@ -11,10 +11,9 @@ redirect_from:
 
 Education
 ======
-* **M.S. in Computer Science**, UMass Lowell, Boston, MA — *Expected 2027*
-  <!-- TODO: Update with your actual degree, department, and graduation year -->
-* **B.S. in Computer Science**, *Your Undergraduate University* — *Year*
-  <!-- TODO: Update with your actual undergraduate degree info -->
+* **Ph.D.**, UMass Lowell
+* **Master's Degree**, Hanyang University, South Korea
+* **Bachelor's Degree**, UET Khuzdar
 
 Skills
 ======
