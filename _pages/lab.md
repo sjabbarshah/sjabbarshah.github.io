@@ -107,7 +107,7 @@ author_profile: true
     <div class="lab-card__avatar"><img src="/images/fabio.jpeg" alt="Fabio Bottalico, Ph.D."></div>
     <p class="lab-card__name"><a href="https://www.linkedin.com/in/fabio-bottalico/" target="_blank">Fabio Bottalico, Ph.D.</a></p>
     <p class="lab-card__role">Postdoctoral Mentor</p>
-    <p class="lab-card__comment">&nbsp;</p>
+    <p class="lab-card__comment">Skillful, with great coordination.</p>
   </div>
 </div>
 
@@ -123,25 +123,26 @@ author_profile: true
     <div class="lab-card__avatar"><img src="/images/gaurav.jpeg" alt="Gaurav Modak"></div>
     <p class="lab-card__name"><a href="https://www.linkedin.com/in/gaurav0123/" target="_blank">Gaurav Modak</a></p>
     <p class="lab-card__role">Graduate Student</p>
-    <p class="lab-card__comment">&nbsp;</p>
+    <p class="lab-card__comment">Talented and a great cook. Friendly.</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/mo.jpg" alt="Mo"></div>
     <p class="lab-card__name">Mo</p>
     <p class="lab-card__role">Graduate Student</p>
-    <p class="lab-card__comment">&nbsp;</p>
+    <p class="lab-card__comment">Simple, talented, and entertaining.</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
     <p class="lab-card__name">Francisco</p>
     <p class="lab-card__role">Graduate Student</p>
-    <p class="lab-card__comment">&nbsp;</p>
+    <p class="lab-card__comment">Highly active, skillful, and full of great energy.</p>
   </div>
   <div class="lab-card">
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
     <p class="lab-card__name">Joao Oliveira</p>
     <p class="lab-card__role">Graduate Student</p>
-    <p class="lab-card__comment">&nbsp;</p>
+    <p class="lab-card__comment">Cool, capable, and great with handling things.</p>
   </div>
 </div>
+
 
