@@ -1,4 +1,5 @@
 ---
+permalink: /
 layout: home-timeline
 title: "Jabbar Shah"
 author_profile: true
