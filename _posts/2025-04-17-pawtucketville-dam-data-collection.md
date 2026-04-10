@@ -1,6 +1,6 @@
 ---
 title: "Data Collection at Pawtucketville Dam"
-date: 2026-04-17
+date: 2025-04-17
 tags:
   - testing
   - research
