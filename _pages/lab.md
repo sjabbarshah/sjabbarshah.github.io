@@ -157,11 +157,10 @@ author_profile: true
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/professor.png" alt="Prof. Alessandro Sabato"></div>
     <div class="lab-card__info">
-      <p class="lab-card__name">Prof. Alessandro Sabato</p>
-      <p class="lab-card__role">Advisor</p>
-      <p class="lab-card__comment">A great advisor who helps you grow both professionally and personally. A wonderful mentor with intellect, wit, and exceptional Italian cooking taste. 🇮🇹</p>
+      <p class="lab-card__name"><a href="https://www.uml.edu/engineering/mechanical-industrial/faculty/sabato-alessandro.aspx" target="_blank">Prof. Alessandro Sabato</a></p>
+      <p class="lab-card__comment"><strong>Advisor</strong>  &mdash; A great advisor who helps you grow both professionally and personally. A wonderful mentor with intellect, wit, and exceptional Italian cooking taste. 🇮🇹</p>
       <div class="lab-card__action">
-        <a href="https://www.uml.edu/engineering/mechanical-industrial/faculty/sabato-alessandro.aspx" class="lab-btn" target="_blank">Profile <i class="fab fa-linkedin"></i></a>
+        <a href="https://www.uml.edu/engineering/mechanical-industrial/faculty/sabato-alessandro.aspx" class="lab-btn" target="_blank">Profile <i class="fas fa-external-link-alt"></i></a>
       </div>
     </div>
   </div>
@@ -172,9 +171,8 @@ author_profile: true
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/fabio.jpeg" alt="Fabio Bottalico, Ph.D."></div>
     <div class="lab-card__info">
-      <p class="lab-card__name">Fabio Bottalico, Ph.D.</p>
-      <p class="lab-card__role">Postdoctoral Mentor</p>
-      <p class="lab-card__comment">An exceptionally skillful researcher with remarkable coordination and a keen eye for detail.</p>
+      <p class="lab-card__name"><a href="https://www.linkedin.com/in/fabio-bottalico/" target="_blank">Fabio Bottalico, Ph.D.</a></p>
+      <p class="lab-card__comment"><strong>Postdoctoral Mentor</strong> &mdash; An exceptionally skillful researcher with remarkable coordination and a keen eye for detail.</p>
       <div class="lab-card__action">
         <a href="https://www.linkedin.com/in/fabio-bottalico/" class="lab-btn" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a>
       </div>
@@ -188,8 +186,7 @@ author_profile: true
     <div class="lab-card__avatar"><img src="/images/profile.png" alt="Jabbar Shah"></div>
     <div class="lab-card__info">
       <p class="lab-card__name">Jabbar Shah</p>
-      <p class="lab-card__role">Graduate Student</p>
-      <p class="lab-card__comment">&nbsp;</p>
+      <p class="lab-card__comment"><strong>Graduate Student</strong></p>
       <div class="lab-card__action">
         <a href="#" class="lab-btn" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a>
       </div>
@@ -198,9 +195,8 @@ author_profile: true
   <div class="lab-card">
     <div class="lab-card__avatar"><img src="/images/gaurav.jpeg" alt="Gaurav Modak"></div>
     <div class="lab-card__info">
-      <p class="lab-card__name">Gaurav Modak</p>
-      <p class="lab-card__role">Graduate Student</p>
-      <p class="lab-card__comment">A genuinely talented and warm individual who is both a wonderful friend and an outstanding cook.</p>
+      <p class="lab-card__name"><a href="https://www.linkedin.com/in/gaurav0123/" target="_blank">Gaurav Modak</a></p>
+      <p class="lab-card__comment"><strong>Graduate Student</strong> &mdash; A genuinely talented and warm individual who is both a wonderful friend and an outstanding cook.</p>
       <div class="lab-card__action">
         <a href="https://www.linkedin.com/in/gaurav0123/" class="lab-btn" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a>
       </div>
@@ -210,8 +206,7 @@ author_profile: true
     <div class="lab-card__avatar"><img src="/images/mo.jpg" alt="Mo"></div>
     <div class="lab-card__info">
       <p class="lab-card__name">Mo</p>
-      <p class="lab-card__role">Graduate Student</p>
-      <p class="lab-card__comment">A humble and gifted mind with a wonderful ability to light up the room.</p>
+      <p class="lab-card__comment"><strong>Graduate Student</strong> &mdash; A humble and gifted mind with a wonderful ability to light up the room.</p>
       <div class="lab-card__action">
         <a href="#" class="lab-btn" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a>
       </div>
@@ -221,8 +216,7 @@ author_profile: true
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
     <div class="lab-card__info">
       <p class="lab-card__name">Francisco</p>
-      <p class="lab-card__role">Graduate Student</p>
-      <p class="lab-card__comment">A powerhouse of energy and skill, always proactive and a true pleasure to work with.</p>
+      <p class="lab-card__comment"><strong>Graduate Student</strong> &mdash; A powerhouse of energy and skill, always proactive and a true pleasure to work with.</p>
       <div class="lab-card__action">
         <a href="#" class="lab-btn" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a>
       </div>
@@ -232,13 +226,10 @@ author_profile: true
     <div class="lab-card__avatar"><i class="fa fa-user"></i></div>
     <div class="lab-card__info">
       <p class="lab-card__name">Joao Oliveira</p>
-      <p class="lab-card__role">Graduate Student</p>
-      <p class="lab-card__comment">Calm, highly capable, and always dependable. Handles every challenge with composure and grace.</p>
+      <p class="lab-card__comment"><strong>Graduate Student</strong> &mdash; Calm, highly capable, and always dependable. Handles every challenge with composure and grace.</p>
       <div class="lab-card__action">
         <a href="#" class="lab-btn" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a>
       </div>
     </div>
   </div>
 </div>
-
-
