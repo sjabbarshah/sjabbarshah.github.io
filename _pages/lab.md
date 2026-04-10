@@ -21,6 +21,7 @@ author_profile: true
   text-align: center;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  overflow: hidden;
 }
 
 .lab-card:hover {
@@ -30,11 +31,11 @@ author_profile: true
 }
 
 .lab-card__avatar {
-  width: 100%;
-  height: 160px;
-  border-radius: 8px;
+  width: calc(100% + 3em);
+  height: 180px;
+  border-radius: 12px 12px 0 0;
   background: var(--border-color, #e1e4e8);
-  margin: 0 auto 1em;
+  margin: -1.5em -1.5em 1em -1.5em;
   display: flex;
   align-items: center;
   justify-content: center;
