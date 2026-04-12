@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Welcome! I'm **Jabbar Shah**, a graduate student at **UMass Lowell** in Boston, MA. This is my personal space where I share my academic journey, research activities, and professional engagements.
+Welcome! I'm **Jabbar Shah**, a graduate student at **UMass Lowell**. This is my personal space where I share my academic journey, research activities, and professional engagements.
 
 Feel free to explore my [CV](/cv/) or browse through my latest activities below.
 
