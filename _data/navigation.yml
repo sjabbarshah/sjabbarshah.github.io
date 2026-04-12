@@ -7,8 +7,5 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Lab"
-    url: /lab/
-
   - title: "Activities"
     url: /year-archive/
