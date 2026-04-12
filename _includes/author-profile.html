@@ -4,9 +4,27 @@
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
 
-<div itemscope itemtype="http://schema.org/Person" class="author__card" style="background: #fff; border-radius: 24px; overflow: hidden; border: 1px solid #eaeaea; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column; margin-bottom: 2em; padding: 1.5em;">
+<style>
+  .author__card-dynamic {
+    background: #fff;
+    border-radius: 24px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    padding: 1.5em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .author__card-dynamic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  }
+</style>
+
+<div itemscope itemtype="http://schema.org/Person" class="author__card author__card-dynamic">
   
-  <div class="author__img-wrapper" style="height: 220px; width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 1.5em;">
+  <div class="author__img-wrapper" style="width: 100%; aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; margin-bottom: 1.5em;">
     {% if author.avatar contains "://" %}
       <img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" style="width: 100%; height: 100%; object-fit: cover; object-position: center 25%;" />
     {% else %}
@@ -20,7 +38,7 @@
     {% if author.bio %}<p class="author__bio" style="font-size: 0.95em; color: #555; margin: 0; line-height: 1.5;">{{ author.bio }}</p>{% endif %}
   </div>
 
-  <div class="author__action-row" style="display: flex; justify-content: space-between; align-items: center;">
+  <div class="author__action-row" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1em;">
     <ul class="author__urls social-icons" style="display: flex; flex-wrap: wrap; gap: 12px; padding: 0; margin: 0; list-style: none; color: #555;">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
