@@ -23,7 +23,7 @@ repository               : "sjabbarshah/sjabbarshah.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile_image.jpg"
   name             : "Jabbar Shah"
   pronouns         : # example: "she/her"  
   bio              : "Hi! I am Jabbar, sharing my academic life here. Please feel free to contact me."
