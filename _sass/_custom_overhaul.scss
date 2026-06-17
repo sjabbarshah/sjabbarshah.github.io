@@ -203,14 +203,34 @@ a {
   }
 }
 
-/* Page Main Container Card */
+/* Page Main Container Card and Layout Wideners */
+.page, .archive {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  float: none !important; /* Ensure it doesn't float right */
+}
+
 .page__inner-wrap {
   background: var(--md-sys-color-surface) !important;
   border: none !important;
   border-radius: var(--md-shape-corner-large) !important;
   box-shadow: var(--md-elevation-1) !important;
-  padding: 3em !important;
+  padding: 4em 5em !important;
   margin-top: 1em;
+}
+
+@media (max-width: 768px) {
+  .page__inner-wrap {
+    padding: 2em 1.5em !important;
+  }
+  .page, .archive {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
 }
 
 /* Homepage Restructuring Layout Helpers */
