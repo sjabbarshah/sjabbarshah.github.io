@@ -556,6 +556,7 @@ a {
   display: flex;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity 0.6s var(--md-transition-easing), visibility 0.6s var(--md-transition-easing) !important;
   z-index: 1;
 }
@@ -563,6 +564,7 @@ a {
 .carousel-slide.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   z-index: 2;
 }
 
@@ -743,4 +745,9 @@ a {
   .timeline__item:nth-child(#{$i}) {
     animation-delay: #{$i * 0.08}s !important;
   }
+}
+
+/* Offset sticky sidebar below fixed navigation bar */
+.sidebar.sticky {
+  top: 85px !important;
 }
