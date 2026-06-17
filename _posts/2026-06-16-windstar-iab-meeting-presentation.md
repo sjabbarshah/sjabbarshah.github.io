@@ -5,14 +5,13 @@ date: 2026-06-16 09:00:00 -0400
 categories: [Meeting, Presentation]
 ---
 
-On June 16, 2026 I presented at the **Windstar IAB (Industry Advisory Board) meeting**. The presentation covered recent advancements in wind‑turbine blade crack segmentation and quantification, showcasing our latest algorithmic pipeline and field‑tested results.
+On June 16, 2026 I presented at the **Windstar IAB (Industry Advisory Board) meeting**. The presentation covered recent advancements NDT of glassfiber, showcasing our latest algorithmic pipeline for subsurface defect detection in glassfiber composites ..
 
 *Presentation highlights*:
-- Overview of the data‑driven crack detection workflow.
-- Comparative performance metrics against baseline methods.
-- Live demo of the real‑time monitoring dashboard.
-- Discussion of future research directions and potential collaborations.
+- Overview of the proposed NDT pipeline .
+- Development of principle component thermograpy analysis (PCTA) pipeline.
+- Methodology and preliminary results.
 
-The audience responded positively, and several IAB members expressed interest in joint pilot projects.
 
+The audience responded positively,
 ![Windstar IAB Meeting](https://via.placeholder.com/800x400?text=Windstar+IAB+Meeting)
