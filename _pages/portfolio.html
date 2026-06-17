@@ -1,14 +1,803 @@
 ---
-layout: archive
-title: "Portfolio"
+layout: single
+title: "Interactive Portfolio"
 permalink: /portfolio/
 author_profile: true
 ---
 
 {% include base_path %}
 
+<style>
+/* Modern typography and premium styles */
+:root {
+  --primary-color: #1a73e8;
+  --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  --accent-color: #10b981;
+  --accent-gradient: linear-gradient(135deg, #34d399 0%, #059669 100%);
+  --award-gradient: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  --border-radius-lg: 20px;
+  --border-radius-md: 12px;
+  --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+/* Portfolio Header Stats */
+.portfolio-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25em;
+  margin-bottom: 2em;
+}
 
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius-md);
+  padding: 1.25em;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--hover-shadow);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-gradient);
+}
+
+.stat-card--award::before {
+  background: var(--award-gradient);
+}
+
+.stat-card--field::before {
+  background: var(--accent-gradient);
+}
+
+.stat-card__number {
+  font-size: 2em;
+  font-weight: 800;
+  margin: 0;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-card--award .stat-card__number {
+  background: var(--award-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-card--field .stat-card__number {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-card__label {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.5em;
+}
+
+/* Search and Filters Bar */
+.portfolio-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  margin-bottom: 2.5em;
+  background: var(--card-bg);
+  padding: 1.5em;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+@media (min-width: 768px) {
+  .portfolio-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.search-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .search-wrapper {
+    max-width: 350px;
+  }
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.85em 1em 0.85em 2.8em;
+  border-radius: var(--border-radius-md);
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.95em;
+  outline: none;
+  background: #f8fafc;
+  transition: var(--transition-smooth);
+}
+
+.search-input:focus {
+  border-color: #3b82f6;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.1em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+}
+
+.filter-pill {
+  padding: 0.65em 1.25em;
+  border-radius: 30px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.9em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.filter-pill:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.filter-pill.active {
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+}
+
+/* Portfolio Cards Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2em;
+}
+
+.portfolio-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  transform: translateY(0);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--hover-shadow);
+}
+
+.portfolio-card__img-container {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: #e2e8f0;
+}
+
+.portfolio-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.portfolio-card:hover .portfolio-card__img {
+  transform: scale(1.05);
+}
+
+.portfolio-card__badge {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  padding: 0.4em 0.85em;
+  border-radius: 30px;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.portfolio-card__badge--research {
+  background: var(--primary-gradient);
+}
+
+.portfolio-card__badge--field-work {
+  background: var(--accent-gradient);
+}
+
+.portfolio-card__content {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.portfolio-card__title {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin: 0 0 0.5em;
+  line-height: 1.3;
+  color: #0f172a;
+}
+
+.portfolio-card__excerpt {
+  font-size: 0.9em;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 1.25em;
+  flex: 1;
+}
+
+.portfolio-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-bottom: 1.25em;
+}
+
+.portfolio-card__tag {
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 0.3em 0.7em;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.portfolio-card__btn {
+  background: #f1f5f9;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 0.8em;
+  border-radius: var(--border-radius-md);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  transition: var(--transition-smooth);
+}
+
+.portfolio-card__btn:hover {
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+}
+
+.portfolio-card__btn i {
+  transition: transform 0.2s ease;
+}
+
+.portfolio-card__btn:hover i {
+  transform: translateX(3px);
+}
+
+.portfolio-grid__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4em 2em;
+  background: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--card-shadow);
+  color: #64748b;
+}
+
+.portfolio-grid__empty i {
+  font-size: 3em;
+  color: #cbd5e1;
+  margin-bottom: 0.5em;
+}
+
+/* Modal Styling */
+.portfolio-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+
+.portfolio-modal.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.portfolio-modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.portfolio-modal__container {
+  background: white;
+  width: 90%;
+  max-width: 900px;
+  max-height: 85vh;
+  border-radius: var(--border-radius-lg);
+  overflow-y: auto;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-modal.open .portfolio-modal__container {
+  transform: scale(1);
+}
+
+.portfolio-modal__header {
+  padding: 1.5em 2em;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 2;
+}
+
+.portfolio-modal__title {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.portfolio-modal__close {
+  background: #f1f5f9;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 1.1em;
+  transition: var(--transition-smooth);
+}
+
+.portfolio-modal__close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  transform: rotate(90deg);
+}
+
+.portfolio-modal__body {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5em;
+}
+
+@media (min-width: 768px) {
+  .portfolio-modal__body {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.portfolio-modal__img {
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  object-fit: cover;
+  max-height: 280px;
+}
+
+.portfolio-modal__section {
+  margin-bottom: 1.5em;
+}
+
+.portfolio-modal__section-title {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 0.6em;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.portfolio-modal__description {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 1.5em;
+}
+
+.portfolio-modal__badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.portfolio-modal__badge {
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.4em 0.85em;
+  border-radius: 8px;
+}
+
+.portfolio-modal__highlight-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-left: 5px solid #22c55e;
+  border-radius: 8px;
+  padding: 1em 1.25em;
+  font-size: 0.9em;
+  color: #166534;
+  margin-bottom: 1.5em;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.portfolio-modal__highlight-box--award {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 5px solid #f59e0b;
+  color: #92400e;
+}
+
+.portfolio-modal__list {
+  padding-left: 1.25em;
+  margin: 0;
+}
+
+.portfolio-modal__list li {
+  margin-bottom: 0.6em;
+  font-size: 0.9em;
+  line-height: 1.4;
+  color: #475569;
+}
+</style>
+
+<!-- Stats Grid -->
+<div class="portfolio-stats">
+  <div class="stat-card">
+    <div class="stat-card__number" id="stat-total">0</div>
+    <div class="stat-card__label">Total Projects</div>
+  </div>
+  <div class="stat-card stat-card--field">
+    <div class="stat-card__number" id="stat-field">0</div>
+    <div class="stat-card__label">Field Campaigns</div>
+  </div>
+  <div class="stat-card stat-card--award">
+    <div class="stat-card__number" id="stat-awards">0</div>
+    <div class="stat-card__label">Key Awards</div>
+  </div>
+</div>
+
+<!-- Filters and Search Controls -->
+<div class="portfolio-controls">
+  <div class="search-wrapper">
+    <input type="text" class="search-input" id="portfolio-search" placeholder="Search projects, tags, tech...">
+    <i class="fas fa-search search-icon"></i>
+  </div>
+  <div class="filter-pills" id="filter-container">
+    <button class="filter-pill active" data-filter="all">All</button>
+    <button class="filter-pill" data-filter="Research">Research</button>
+    <button class="filter-pill" data-filter="Field Work">Field Work</button>
+  </div>
+</div>
+
+<!-- Portfolio Grid -->
+<div class="portfolio-grid" id="portfolio-grid">
+  <!-- Dynamic Cards Rendered by JavaScript -->
+</div>
+
+<!-- Detailed Overlay Modal -->
+<div class="portfolio-modal" id="portfolio-modal">
+  <div class="portfolio-modal__overlay" id="modal-overlay"></div>
+  <div class="portfolio-modal__container">
+    <div class="portfolio-modal__header">
+      <h2 class="portfolio-modal__title" id="modal-title">Project Title</h2>
+      <button class="portfolio-modal__close" id="modal-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="portfolio-modal__body">
+      <div class="portfolio-modal-col-left">
+        <img class="portfolio-modal__img" id="modal-image" src="" alt="Project Visual">
+        
+        <div class="portfolio-modal__section" style="margin-top: 1.5em;">
+          <div class="portfolio-modal__section-title"><i class="fas fa-tools"></i> Technologies</div>
+          <div class="portfolio-modal__badge-list" id="modal-tech">
+            <!-- Dynamic Badges -->
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-modal-col-right">
+        <div id="modal-award-box" class="portfolio-modal__highlight-box portfolio-modal__highlight-box--award">
+          <i class="fas fa-trophy" style="margin-top: 2px;"></i>
+          <div>
+            <strong>Award:</strong> <span id="modal-award-text">Award info</span>
+          </div>
+        </div>
+
+        <div id="modal-presentation-box" class="portfolio-modal__highlight-box">
+          <i class="fas fa-chalkboard-teacher" style="margin-top: 2px;"></i>
+          <div>
+            <strong>Presented at:</strong> <span id="modal-presentation-text">Presentation info</span>
+          </div>
+        </div>
+
+        <div class="portfolio-modal__section">
+          <div class="portfolio-modal__section-title"><i class="fas fa-info-circle"></i> Project Details</div>
+          <p class="portfolio-modal__description" id="modal-description">Detailed narrative...</p>
+        </div>
+
+        <div class="portfolio-modal__section">
+          <div class="portfolio-modal__section-title"><i class="fas fa-bullseye"></i> Key Outcomes</div>
+          <ul class="portfolio-modal__list" id="modal-outcomes">
+            <!-- Dynamic Outcomes -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Jekyll Collection Serialized to JSON -->
+<script id="portfolio-data" type="application/json">
+[
+  {% for item in site.portfolio %}
+    {
+      "id": "{{ item.url | slugify }}",
+      "title": {{ item.title | jsonify }},
+      "excerpt": {{ item.excerpt | jsonify }},
+      "content": {{ item.content | jsonify }},
+      "category": {{ item.category | jsonify }},
+      "tags": {{ item.tags | jsonify }},
+      "image": {{ item.image | jsonify }},
+      "award": {{ item.award | jsonify }},
+      "presentations": {{ item.presentations | jsonify }},
+      "tech_stack": {{ item.tech_stack | jsonify }},
+      "outcomes": {{ item.outcomes | jsonify }},
+      "date": "{{ item.date | date: '%b %d, %Y' }}"
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Raw JSON Data injection from Jekyll
+  const dataEl = document.getElementById("portfolio-data");
+  let projects = [];
+  try {
+    projects = JSON.parse(dataEl.textContent);
+  } catch(e) {
+    console.error("Error parsing portfolio JSON data:", e);
+  }
+
+  // DOM elements
+  const gridEl = document.getElementById("portfolio-grid");
+  const searchEl = document.getElementById("portfolio-search");
+  const filterContainer = document.getElementById("filter-container");
+  const modalEl = document.getElementById("portfolio-modal");
+  const modalOverlay = document.getElementById("modal-overlay");
+  const modalClose = document.getElementById("modal-close");
+
+  // State
+  let activeFilter = "all";
+  let searchQuery = "";
+
+  // Statistics Calculation
+  const totalCount = projects.length;
+  const fieldCount = projects.filter(p => p.category === "Field Work").length;
+  const awardCount = projects.filter(p => p.award).length;
+
+  document.getElementById("stat-total").textContent = totalCount;
+  document.getElementById("stat-field").textContent = fieldCount;
+  document.getElementById("stat-awards").textContent = awardCount;
+
+  // Render Project Cards
+  function renderProjects() {
+    const filtered = projects.filter(project => {
+      const matchesFilter = activeFilter === "all" || project.category === activeFilter;
+      const term = searchQuery.toLowerCase();
+      const matchesSearch = !term || 
+        project.title.toLowerCase().includes(term) ||
+        project.excerpt.toLowerCase().includes(term) ||
+        project.content.toLowerCase().includes(term) ||
+        project.tags.some(t => t.toLowerCase().includes(term)) ||
+        (project.tech_stack && project.tech_stack.some(s => s.toLowerCase().includes(term)));
+      
+      return matchesFilter && matchesSearch;
+    });
+
+    if (filtered.length === 0) {
+      gridEl.innerHTML = `
+        <div class="portfolio-grid__empty">
+          <i class="fas fa-search-minus"></i>
+          <h3>No matching projects found</h3>
+          <p>Try adjusting your search keywords or active category filters.</p>
+        </div>
+      `;
+      return;
+    }
+
+    gridEl.innerHTML = filtered.map(project => {
+      const categoryClass = project.category.toLowerCase().replace(" ", "-");
+      const tagsHtml = project.tags.map(tag => `<span class="portfolio-card__tag">${tag}</span>`).join('');
+      
+      return `
+        <div class="portfolio-card">
+          <div class="portfolio-card__img-container">
+            <img class="portfolio-card__img" src="${project.image}" alt="${project.title}" loading="lazy">
+            <span class="portfolio-card__badge portfolio-card__badge--${categoryClass}">${project.category}</span>
+          </div>
+          <div class="portfolio-card__content">
+            <h3 class="portfolio-card__title">${project.title}</h3>
+            <p class="portfolio-card__excerpt">${project.excerpt}</p>
+            <div class="portfolio-card__tags">
+              ${tagsHtml}
+            </div>
+            <button class="portfolio-card__btn" onclick="openProjectModal('${project.id}')">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Open Modal Details
+  window.openProjectModal = function(id) {
+    const project = projects.find(p => p.id === id);
+    if (!project) return;
+
+    document.getElementById("modal-title").textContent = project.title;
+    document.getElementById("modal-image").src = project.image;
+    document.getElementById("modal-image").alt = project.title;
+    document.getElementById("modal-description").textContent = project.content.replace(/---[\s\S]*?---/, '').trim();
+
+    // Award setup
+    const awardBox = document.getElementById("modal-award-box");
+    if (project.award) {
+      document.getElementById("modal-award-text").textContent = project.award;
+      awardBox.style.display = "flex";
+    } else {
+      awardBox.style.display = "none";
+    }
+
+    // Presentation setup
+    const presBox = document.getElementById("modal-presentation-box");
+    if (project.presentations) {
+      document.getElementById("modal-presentation-text").textContent = project.presentations;
+      presBox.style.display = "flex";
+    } else {
+      presBox.style.display = "none";
+    }
+
+    // Tech stack setup
+    const techContainer = document.getElementById("modal-tech");
+    if (project.tech_stack && project.tech_stack.length > 0) {
+      techContainer.innerHTML = project.tech_stack.map(tech => `
+        <span class="portfolio-modal__badge">${tech}</span>
+      `).join('');
+    } else {
+      techContainer.innerHTML = '<span class="portfolio-modal__badge">N/A</span>';
+    }
+
+    // Outcomes setup
+    const outcomesContainer = document.getElementById("modal-outcomes");
+    if (project.outcomes && project.outcomes.length > 0) {
+      outcomesContainer.innerHTML = project.outcomes.map(outcome => `
+        <li>${outcome}</li>
+      `).join('');
+    } else {
+      outcomesContainer.innerHTML = '<li>No key outcomes detailed yet.</li>';
+    }
+
+    // Show modal
+    modalEl.classList.add("open");
+    document.body.style.overflow = "hidden"; // Prevent background scroll
+  };
+
+  // Close Modal Details
+  function closeProjectModal() {
+    modalEl.classList.remove("open");
+    document.body.style.overflow = ""; // Re-enable background scroll
+  }
+
+  modalClose.addEventListener("click", closeProjectModal);
+  modalOverlay.addEventListener("click", closeProjectModal);
+  
+  // Close modal on Escape key press
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalEl.classList.contains("open")) {
+      closeProjectModal();
+    }
+  });
+
+  // Filter pills events
+  filterContainer.addEventListener("click", (e) => {
+    const pill = e.target.closest(".filter-pill");
+    if (!pill) return;
+
+    // Toggle active state
+    filterContainer.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
+    pill.classList.add("active");
+
+    activeFilter = pill.getAttribute("data-filter");
+    renderProjects();
+  });
+
+  // Search input events
+  searchEl.addEventListener("input", (e) => {
+    searchQuery = e.target.value;
+    renderProjects();
+  });
+
+  // Initial Render
+  renderProjects();
+});
+</script>
