@@ -810,6 +810,45 @@ a {
   background: #9aa0a6;
 }
 
+/* Logo Marquee */
+.logo-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-surface-variant);
+  border-radius: var(--md-shape-corner-medium);
+  padding: 20px 0;
+  margin: 1.5em 0 3em;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.logo-marquee {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.logo-marquee:hover {
+  animation-play-state: paused;
+}
+
+.logo-marquee__img {
+  height: 50px;
+  width: auto;
+  margin-right: 60px;
+  filter: grayscale(100%) opacity(0.7);
+  transition: filter 0.3s var(--md-transition-easing), transform 0.3s var(--md-transition-easing);
+  object-fit: contain;
+}
+
+.logo-marquee__img:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
 /* Headline Marquee Ticker */
 .headline-marquee-container {
   width: 100%;
