@@ -2,7 +2,7 @@
 layout: single
 title: "Lab Members"
 permalink: /lab/
-author_profile: true
+author_profile: false
 ---
 
 <style>
