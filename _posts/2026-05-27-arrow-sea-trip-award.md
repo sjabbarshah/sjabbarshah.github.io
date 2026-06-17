@@ -9,4 +9,4 @@ In late May 2026, I traveled to **Arrow SEA** event. It was a three‑day event.
 
 Part of the event also included a poster presentation, a workshop on advanced turbine control strategies, and a few technical talks. During the visit, I was honored with the **Leadership Award** for my contributions to wind energy activities. I would like to thank my advisor Dr. Sabato for his support and guidance, and also the Arrow SEA organizers for the great opportunity to join the event.
 
-![Arrow SEA Turbine]({{ '/images/arrow_sea_offshoretrip.HEIC' | relative_url }})
+![Arrow SEA Turbine]({{ '/images/arrow_sea_offshoretrip.jpg' | relative_url }})
