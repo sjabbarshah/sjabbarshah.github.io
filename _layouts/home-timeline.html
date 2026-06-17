@@ -23,6 +23,133 @@ layout: default
 
       <!-- Timeline Section -->
       <section class="timeline-section">
+        
+        <!-- Dynamic Featured Posts Slideshow -->
+        {% assign carousel_posts = "" | split: "," %}
+        {% assign count = 0 %}
+        {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+        {% for post in sorted_posts %}
+          {% if post.content contains "![" or post.image %}
+            {% if count < 3 %}
+              {% assign carousel_posts = carousel_posts | push: post %}
+              {% assign count = count | plus: 1 %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {% if carousel_posts.size > 0 %}
+        <div class="featured-carousel" id="featured-carousel">
+          <div class="carousel-inner">
+            {% for c_post in carousel_posts %}
+              {% assign post_img = "" %}
+              {% if c_post.content contains "![" %}
+                {% assign first_part = c_post.content | split: "![" | last %}
+                {% assign second_part = first_part | split: "](" | last %}
+                {% assign img_url = second_part | split: ")" | first %}
+                {% if img_url contains "relative_url" %}
+                  {% assign clean_img = img_url | split: "'" %}
+                  {% assign post_img = clean_img[1] %}
+                  {% if post_img == nil or post_img == "" %}
+                    {% assign clean_img_double = img_url | split: '"' %}
+                    {% assign post_img = clean_img_double[1] %}
+                  {% endif %}
+                {% else %}
+                  {% assign post_img = img_url %}
+                {% endif %}
+              {% endif %}
+              
+              {% if post_img == "" or post_img == nil %}
+                {% assign post_img = "/images/spie.jpeg" %}
+              {% endif %}
+
+              <div class="carousel-slide{% if forloop.first %} active{% endif %}" data-slide-index="{{ forloop.index0 }}">
+                <div class="carousel-slide__img-wrapper">
+                  <img src="{{ post_img | relative_url }}" alt="{{ c_post.title }}" class="carousel-slide__img">
+                </div>
+                <div class="carousel-slide__content">
+                  <span class="carousel-slide__badge">Featured Update</span>
+                  <h3 class="carousel-slide__title"><a href="{{ base_path }}{{ c_post.url }}">{{ c_post.title }}</a></h3>
+                  <p class="carousel-slide__excerpt">{{ c_post.excerpt | strip_html | truncatewords: 22 }}</p>
+                  <a href="{{ base_path }}{{ c_post.url }}" class="carousel-slide__btn">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          
+          <button class="carousel-control carousel-control--prev" id="carousel-prev" aria-label="Previous slide">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button class="carousel-control carousel-control--next" id="carousel-next" aria-label="Next slide">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </button>
+          
+          <div class="carousel-indicators">
+            {% for c_post in carousel_posts %}
+              <div class="carousel-dot{% if forloop.first %} active{% endif %}" data-dot-index="{{ forloop.index0 }}"></div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const carousel = document.getElementById("featured-carousel");
+          if (!carousel) return;
+
+          const slides = carousel.querySelectorAll(".carousel-slide");
+          const dots = carousel.querySelectorAll(".carousel-dot");
+          const prevBtn = document.getElementById("carousel-prev");
+          const nextBtn = document.getElementById("carousel-next");
+          
+          let currentIndex = 0;
+          let slideInterval;
+          const intervalTime = 4500;
+
+          function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            dots.forEach(dot => dot.classList.remove("active"));
+
+            slides[index].classList.add("active");
+            dots[index].classList.add("active");
+            currentIndex = index;
+          }
+
+          function nextSlide() {
+            let nextIndex = (currentIndex + 1) % slides.length;
+            showSlide(nextIndex);
+          }
+
+          function prevSlide() {
+            let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(prevIndex);
+          }
+
+          function startAutoCycle() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, intervalTime);
+          }
+
+          nextBtn.addEventListener("click", () => {
+            nextSlide();
+            startAutoCycle();
+          });
+
+          prevBtn.addEventListener("click", () => {
+            prevSlide();
+            startAutoCycle();
+          });
+
+          dots.forEach((dot, idx) => {
+            dot.addEventListener("click", () => {
+              showSlide(idx);
+              startAutoCycle();
+            });
+          });
+
+          startAutoCycle();
+        });
+        </script>
+        {% endif %}
+
         <h2 class="timeline-heading">
           <i class="fa fa-stream" aria-hidden="true"></i> Recent Activities
         </h2>
