@@ -153,6 +153,21 @@ layout: default
         </script>
         {% endif %}
 
+        {% if site.posts.size > 0 %}
+        <div class="headline-marquee-container">
+          <div class="headline-marquee">
+            {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+            {% for post in sorted_posts %}
+              <span class="headline-marquee__item"><i class="fas fa-bolt" style="color: var(--md-sys-color-accent); margin-right: 8px;"></i> <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></span>
+            {% endfor %}
+            <!-- Duplicate for seamless scrolling -->
+            {% for post in sorted_posts %}
+              <span class="headline-marquee__item"><i class="fas fa-bolt" style="color: var(--md-sys-color-accent); margin-right: 8px;"></i> <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
         <h2 class="timeline-heading">
           <i class="fa fa-stream" aria-hidden="true"></i> Recent Activities
         </h2>

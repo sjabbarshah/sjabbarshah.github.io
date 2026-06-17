@@ -1,8 +1,8 @@
 # Main navigation links shown in the site header.
 
 main:
-  - title: "About"
-    url: /about/
+  - title: "Home"
+    url: /
 
   - title: "CV"
     url: /cv/

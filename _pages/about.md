@@ -2,13 +2,16 @@
 permalink: /
 layout: home-timeline
 title: "Jabbar Shah"
-author_profile: true
+author_profile: false
 redirect_from: 
   - /about/
   - /about.html
 ---
 
 <div class="hero-intro">
+  <div class="hero-avatar">
+    <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Jabbar Shah" class="hero-avatar__img">
+  </div>
   <h1 class="hero-title">Hi, I'm Jabbar Shah.</h1>
   <p class="hero-subtitle">Graduate Researcher at UMass Lowell. Specializing in Automated Wind Turbine Inspection, Nondestructive Testing (NDT), and Deep Learning Computer Vision.</p>
 </div>
