@@ -13,5 +13,6 @@ On June 16, 2026 I presented at the **Windstar IAB (Industry Advisory Board) mee
 - Methodology and preliminary results.
 
 
-The audience responded positively,
-![Windstar IAB Meeting](https://via.placeholder.com/800x400?text=Windstar+IAB+Meeting)
+The audience responded positively.
+
+![Windstar IAB Meeting]({{ '/images/windstar_iab_meeting.jpg' | relative_url }})
