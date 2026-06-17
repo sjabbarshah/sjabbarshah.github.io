@@ -40,8 +40,9 @@ layout: default
         {% endfor %}
 
         {% if carousel_posts.size > 0 %}
-        <div class="featured-carousel" id="featured-carousel">
-          <div class="carousel-inner">
+        <div class="featured-carousel-wrapper" id="featured-carousel-wrapper">
+          <div class="featured-carousel">
+            <div class="carousel-inner">
             {% for c_post in carousel_posts %}
               {% assign post_img = "" %}
               {% if c_post.content contains "![" %}
@@ -94,11 +95,11 @@ layout: default
 
         <script>
         document.addEventListener("DOMContentLoaded", () => {
-          const carousel = document.getElementById("featured-carousel");
-          if (!carousel) return;
+          const wrapper = document.getElementById("featured-carousel-wrapper");
+          if (!wrapper) return;
 
-          const slides = carousel.querySelectorAll(".carousel-slide");
-          const dots = carousel.querySelectorAll(".carousel-dot");
+          const slides = wrapper.querySelectorAll(".carousel-slide");
+          const dots = wrapper.querySelectorAll(".carousel-dot");
           const prevBtn = document.getElementById("carousel-prev");
           const nextBtn = document.getElementById("carousel-next");
           

@@ -19,7 +19,7 @@ redirect_from:
   <span class="highlight-badge"><i class="fas fa-map-marker-alt"></i> Boston, MA</span>
 </div>
 
-<h2>Featured Research</h2>
+<h2 class="text-center">Featured Research</h2>
 <div class="home-featured-grid">
   <div class="home-featured-card">
     <div class="home-featured-card__img-wrapper">
@@ -49,6 +49,6 @@ redirect_from:
   <p class="home-connect-card__desc">Have questions about my research or want to discuss opportunities? Connect with me directly.</p>
   <div class="home-connect-card__actions">
     <a href="mailto:syed_jabbarshah@student.uml.edu" class="btn btn--primary">Email Me <i class="fas fa-envelope" style="margin-left: 5px;"></i></a>
-    <a href="https://github.com/khandriod" class="btn" style="border: 1px solid var(--md-sys-color-surface-variant); color: var(--md-sys-color-on-surface); background: rgba(255,255,255,0.02);">GitHub <i class="fab fa-github" style="margin-left: 5px;"></i></a>
+    <a href="https://github.com/khandriod" class="btn" style="border: 1px solid var(--md-sys-color-surface-variant); color: var(--md-sys-color-on-surface); background: transparent;">GitHub <i class="fab fa-github" style="margin-left: 5px;"></i></a>
   </div>
 </div>
