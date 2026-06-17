@@ -31,17 +31,7 @@ redirect_from:
       <a href="/portfolio/" class="home-featured-card__btn">Explore Project <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
-  
-  <div class="home-featured-card">
-    <div class="home-featured-card__img-wrapper">
-      <img src="/images/windstar_iab_meeting.jpg" alt="Nondestructive Testing of Composites" class="home-featured-card__img" loading="lazy">
-    </div>
-    <div class="home-featured-card__content">
-      <h3 class="home-featured-card__title">Glassfiber Composites NDT</h3>
-      <p class="home-featured-card__excerpt">Developed a Principal Component Thermography Analysis (PCTA) pipeline for subsurface micro-fault detection.</p>
-      <a href="/portfolio/" class="home-featured-card__btn">Explore Project <i class="fas fa-arrow-right"></i></a>
-    </div>
-  </div>
+
 </div>
 
 <div class="home-connect-card">

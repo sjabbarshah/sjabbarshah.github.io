@@ -115,6 +115,11 @@ a {
 }
 
 /* Sidebar Profile Card */
+.sidebar {
+  position: relative;
+  z-index: 100 !important;
+}
+
 .author__card {
   background: var(--md-sys-color-surface) !important;
   border: none !important;
@@ -123,6 +128,8 @@ a {
   padding: 2em !important;
   transition: all var(--md-transition-duration) var(--md-transition-easing) !important;
   margin-top: 1em;
+  position: relative;
+  z-index: 100 !important;
 
   &:hover {
     transform: translateY(-3px);
